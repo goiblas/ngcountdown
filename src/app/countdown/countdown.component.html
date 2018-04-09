@@ -1,0 +1,9 @@
+<div class="countdown" [ngClass]="{'isDark' : dark}">
+    <div *ngFor="let spanclock of clock$ | async" class="countdown__item">
+    <div class="countdown__value">
+            {{spanclock.value | twoDigits}}
+    </div>
+    <div class="countdown__label"> 
+        {{spanclock.label}}
+    </div>
+</div>
